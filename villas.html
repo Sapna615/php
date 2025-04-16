@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Villas & Apartments - TravelEase</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #3498db;
+            --text-color: #ffffff;
+        }
+
+        body {
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            font-family: 'Arial', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .dynamic-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            transition: background 2s ease-in-out;
+        }
+
+        .navbar {
+            background: rgba(0, 0, 0, 0.8) !important;
+            backdrop-filter: blur(10px);
+        }
+
+        .villa-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(52, 152, 219, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .villa-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(52, 152, 219, 0.2);
+        }
+
+        .villa-card h3 {
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .villa-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .villa-card ul li {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .villa-card ul li::before {
+            content: "⬡";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+        }
+
+        .hero-section {
+            padding: 8rem 0 4rem;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.3);
+            margin-bottom: 4rem;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: #ffffff;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .geometric-shape {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(52, 152, 219, 0.1);
+            filter: blur(50px);
+            animation: float 20s infinite linear;
+            z-index: -1;
+        }
+
+        @keyframes float {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(100px, 100px) rotate(180deg); }
+            100% { transform: translate(0, 0) rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="dynamic-bg"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">TravelEase</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-hotel"></i> Accommodations
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="luxury.html">Luxury Hotels</a></li>
+                            <li><a class="dropdown-item" href="resorts.html">Resorts</a></li>
+                            <li><a class="dropdown-item active" href="villas.html">Villas & Apartments</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="../contact.php">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../login.php">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="hero-title">Villas & Apartments Innovation</h1>
+            <p class="hero-subtitle">Experience the future of private accommodations with smart technology and sustainable living</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container py-5">
+        <div class="villa-card">
+            <h3>1. Smart & AI-Powered Accommodations</h3>
+            <ul>
+                <li>AI-based smart assistants (like Alexa or Google Home) to control lighting, temperature, and security.</li>
+                <li>Facial recognition or biometric check-in for seamless and secure access.</li>
+                <li>Predictive analytics to recommend local experiences based on guest preferences.</li>
+            </ul>
+        </div>
+
+        <div class="villa-card">
+            <h3>2. Workcation & Extended Stay Packages</h3>
+            <ul>
+                <li>Fully furnished, long-term stay packages for remote workers and digital nomads.</li>
+                <li>Private office spaces with ergonomic setups, high-speed Wi-Fi, and business services.</li>
+                <li>Co-living and networking events for professionals staying in the same villa community.</li>
+            </ul>
+        </div>
+
+        <div class="villa-card">
+            <h3>3. Sustainable & Eco-Friendly Stays</h3>
+            <ul>
+                <li>Solar-powered villas and energy-efficient smart apartments.</li>
+                <li>Zero-waste policies with composting, plastic-free amenities, and water recycling systems.</li>
+                <li>Rooftop gardens and urban farming experiences for guests.</li>
+            </ul>
+        </div>
+
+        <div class="villa-card">
+            <h3>4. Wellness & Lifestyle-Focused Living</h3>
+            <ul>
+                <li>Private in-room spa services, yoga sessions, and wellness retreats.</li>
+                <li>Smart fitness rooms equipped with AI-powered workout assistants.</li>
+                <li>Sleep-enhancing technology with circadian lighting, noise-canceling systems, and AI-powered mattress settings.</li>
+            </ul>
+        </div>
+
+        <div class="villa-card">
+            <h3>5. Augmented & Virtual Reality Experiences</h3>
+            <ul>
+                <li>VR Property Tours: Guests can explore villas and apartments virtually before booking.</li>
+                <li>AR Local Guide: Augmented reality apps that showcase nearby attractions and dining recommendations.</li>
+                <li>Metaverse Integration: Virtual concierge services and digital interactions with property management.</li>
+            </ul>
+        </div>
+
+        <div class="villa-card">
+            <h3>6. Contactless & Blockchain-Based Booking</h3>
+            <ul>
+                <li>Secure, fraud-proof blockchain transactions for bookings and payments.</li>
+                <li>Cryptocurrency-friendly properties accepting Bitcoin, Ethereum, and more.</li>
+                <li>NFT-based membership programs that provide exclusive discounts and perks.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Dynamic background animation
+        const backgrounds = [
+            'linear-gradient(45deg, #2c3e50, #3498db)',
+            'linear-gradient(45deg, #8e44ad, #2980b9)',
+            'linear-gradient(45deg, #27ae60, #2c3e50)',
+            'linear-gradient(45deg, #c0392b, #8e44ad)',
+            'linear-gradient(45deg, #2980b9, #27ae60)'
+        ];
+
+        let currentBg = 0;
+        const bg = document.querySelector('.dynamic-bg');
+
+        function changeBackground() {
+            bg.style.background = backgrounds[currentBg];
+            currentBg = (currentBg + 1) % backgrounds.length;
+        }
+
+        // Change background every 5 seconds
+        setInterval(changeBackground, 5000);
+        changeBackground(); // Initial background
+
+        // Create floating geometric shapes
+        function createShape() {
+            const shape = document.createElement('div');
+            shape.className = 'geometric-shape';
+            
+            const size = Math.random() * 300 + 100;
+            shape.style.width = `${size}px`;
+            shape.style.height = `${size}px`;
+            
+            shape.style.left = `${Math.random() * 100}vw`;
+            shape.style.top = `${Math.random() * 100}vh`;
+            
+            document.body.appendChild(shape);
+            
+            setTimeout(() => {
+                shape.remove();
+                createShape();
+            }, 20000);
+        }
+
+        // Create initial shapes
+        for (let i = 0; i < 5; i++) {
+            setTimeout(() => createShape(), i * 1000);
+        }
+    </script>
+</body>
+</html>

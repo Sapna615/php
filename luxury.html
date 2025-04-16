@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Hotels - TravelEase</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #b8860b;
+            --secondary-color: #32323a;
+            --accent-color: #ffd700;
+            --text-color: #ffffff;
+        }
+
+        body {
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            font-family: 'Arial', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .animated-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(45deg, #000000, #1a1a1a);
+        }
+
+        .particle {
+            position: absolute;
+            background: var(--accent-color);
+            border-radius: 50%;
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        .navbar {
+            background: rgba(0, 0, 0, 0.8) !important;
+            backdrop-filter: blur(10px);
+        }
+
+        .section-title {
+            color: var(--accent-color);
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .luxury-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .luxury-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.2);
+        }
+
+        .luxury-card h3 {
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .luxury-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .luxury-card ul li {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .luxury-card ul li::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+        }
+
+        .hero-section {
+            padding: 8rem 0 4rem;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5);
+            margin-bottom: 4rem;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: #ffffff;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="animated-bg"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">TravelEase</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="destinations.html">Destinations</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="luxury.html">Luxury Hotels</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="hero-title">Luxury Hotels & Tourism Innovation</h1>
+            <p class="hero-subtitle">Experience unparalleled luxury and cutting-edge hospitality solutions that redefine the art of travel</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container py-5">
+        <div class="luxury-card">
+            <h3>1. Personalized AI-Driven Hospitality</h3>
+            <ul>
+                <li>Implement AI-powered virtual assistants and chatbots for 24/7 concierge services.</li>
+                <li>Use AI-driven predictive analytics to anticipate guest preferences and provide tailored offers.</li>
+                <li>Smart room technology that adjusts lighting, temperature, and entertainment based on guest preferences.</li>
+            </ul>
+        </div>
+
+        <div class="luxury-card">
+            <h3>2. Ultra-Luxury Workcation Packages</h3>
+            <ul>
+                <li>Introduce premium "Work from Paradise" packages with high-speed internet, ergonomic workspaces, and executive lounges.</li>
+                <li>Private office pods in scenic locations within the hotel, offering an inspiring and distraction-free environment.</li>
+                <li>Partnerships with co-working brands to offer seamless remote work solutions.</li>
+            </ul>
+        </div>
+
+        <div class="luxury-card">
+            <h3>3. Sustainable & Eco-Luxury Experiences</h3>
+            <ul>
+                <li>Carbon-neutral hotel stays with eco-friendly architecture, solar energy, and zero-waste policies.</li>
+                <li>Sustainable gourmet dining using locally sourced organic produce.</li>
+                <li>Immersive nature experiences such as guided eco-tours, reforestation programs, and wildlife conservation stays.</li>
+            </ul>
+        </div>
+
+        <div class="luxury-card">
+            <h3>4. Hyper-Personalized VIP Experiences</h3>
+            <ul>
+                <li>Customizable travel itineraries curated by AI and human travel concierges.</li>
+                <li>Private jet & yacht partnerships for ultra-exclusive getaways.</li>
+                <li>Exclusive cultural immersion experiences, such as private performances, cooking sessions with celebrity chefs, or after-hours access to heritage sites.</li>
+            </ul>
+        </div>
+
+        <div class="luxury-card">
+            <h3>5. Immersive Virtual & Augmented Reality (VR/AR)</h3>
+            <ul>
+                <li>VR tours of hotels, allowing guests to explore suites before booking.</li>
+                <li>AR-based interactive guides in tourist destinations, providing real-time information.</li>
+                <li>Virtual concierge services where guests can visualize their planned experiences.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Animated background with particles
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            
+            // Random size between 2 and 6 pixels
+            const size = Math.random() * 4 + 2;
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size}px`;
+            
+            // Random position
+            particle.style.left = `${Math.random() * 100}vw`;
+            particle.style.top = `${Math.random() * 100}vh`;
+            
+            document.querySelector('.animated-bg').appendChild(particle);
+            
+            // Animate the particle
+            const animation = particle.animate([
+                { 
+                    transform: `translate(0, 0)`,
+                    opacity: 0.3
+                },
+                {
+                    transform: `translate(${Math.random() * 200 - 100}px, ${Math.random() * 200 - 100}px)`,
+                    opacity: 0
+                }
+            ], {
+                duration: Math.random() * 3000 + 2000,
+                easing: 'ease-out'
+            });
+            
+            animation.onfinish = () => {
+                particle.remove();
+                createParticle();
+            };
+        }
+
+        // Create initial particles
+        for (let i = 0; i < 50; i++) {
+            createParticle();
+        }
+    </script>
+</body>
+</html>
