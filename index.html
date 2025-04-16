@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelEase - Your Travel Companion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        body {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background: rgba(0, 0, 0, 0.7) !important;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-section {
+            position: relative;
+            overflow: hidden;
+            padding: 150px 0;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            border-radius: 20px;
+            margin: 20px 0;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: none;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .footer {
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 50px 0 20px;
+            margin-top: 50px;
+        }
+
+        .social-links a {
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #23a6d5 !important;
+        }
+
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0% { transform: translate(0, 0px); }
+            50% { transform: translate(0, 15px); }
+            100% { transform: translate(0, 0px); }
+        }
+
+        .btn-custom {
+            background: linear-gradient(45deg, #23a6d5, #23d5ab);
+            border: none;
+            color: white;
+            transition: transform 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            transform: scale(1.05);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-plane-departure me-2"></i>TravelEase
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Destinations
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="popular.php">Popular Places</a></li>
+                            <li><a class="dropdown-item" href="domestic.html">Domestic Tours</a></li>
+                            <li><a class="dropdown-item" href="international.html">International Tours</a></li>
+                            <li><a class="dropdown-item" href="adventure.html">Adventure Tours</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Accommodations
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="accommodations/luxury.html">Luxury Hotels</a></li>
+                            <li><a class="dropdown-item" href="accommodations/resorts.html">Resorts</a></li>
+                            <li><a class="dropdown-item" href="accommodations/villas.html">Villas</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.php">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.php">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.php">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-custom ms-2" href="register.php">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero-section">
+        <div class="container">
+            <h1 class=" text-lg display-3 mb-4 floating">Discover Your Next Adventure</h1>
+            <p class="lead mb-4">Experience the world's most breathtaking destinations with TravelEase</p>
+            <a href="popular.php" class="btn btn-custom btn-lg">Explore Destinations</a>
+        </div>
+    </div>
+    <main>
+        <section class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-4">Our Vision</h2>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <p class="lead text-center">The tourism industry is undergoing a massive transformation. In an era where travelers seek more than just destinations, they crave immersive experiences, sustainability, digital convenience, and personalization.</p>
+                        <p class="text-center">Our vision is to redefine the travel experience by integrating technology, eco-conscious solutions, and unique lifestyle offerings that cater to modern travelers' expectations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">🌍 The Ultimate Travel Experience</h2>
+                <div class="row mb-5 align-items-center">
+                    <div class="col-md-6">
+                        <h3>1. Smart & AI-Powered Hospitality</h3>
+                        <p>Technology is revolutionizing hospitality. By integrating AI-driven experiences, we ensure that every guest receives personalized service.</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i>AI Virtual Concierge</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Smart Room Automation</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Predictive Recommendations</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSthQ78hSDNxqqSn06rfaxgXXQwUZztGkGFsQ&s" alt="AI-Powered Hospitality" class="img-fluid rounded shadow floating" style="animation-delay: 0.5s;">
+                    </div>
+                </div>
+                <div class="row mb-5 align-items-center">
+                    <div class="col-md-6 order-md-2">
+                        <h3>2. Sustainable & Eco-Friendly Tourism</h3>
+                        <p>We are committed to promoting eco-conscious travel solutions that preserve our planet.</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-leaf text-success me-2"></i>Carbon-Neutral Hotels & Resorts</li>
+                            <li><i class="fas fa-leaf text-success me-2"></i>Plastic-Free & Sustainable Stays</li>
+                            <li><i class="fas fa-leaf text-success me-2"></i>Eco-Tours & Conservation Activities</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 order-md-1">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMdyWHXTJ6Etg9qh2cC0Qg_6pby4hXgcdB5w&s" alt="Eco-Friendly Tourism" class="img-fluid rounded shadow floating" style="animation-delay: 0.5s;">
+                    </div>
+                </div>
+                <div class="row mb-5 align-items-center">
+                    <div class="col-md-6">
+                        <h3>3. Digital Nomad-Friendly Stays</h3>
+                        <p>Perfect for remote workers and digital nomads seeking the perfect work-life balance.</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-wifi text-success me-2"></i>High-Speed Wi-Fi & Co-Working Lounges</li>
+                            <li><i class="fas fa-laptop text-success me-2"></i>Private Workspaces & Business Services</li>
+                            <li><i class="fas fa-home text-success me-2"></i>Exclusive Long-Stay Offers</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="https://cdn.nomadstays.com/nomadstays/img/genre/29/d9c11364-d172-44c3-98d5-48de9a9f37f4_parabol-the-agile-meeting-tool-dPlsRcf47bc-unsplash.jpg?height=310" alt="Digital Nomad Workspace" class="img-fluid rounded shadow floating" style="animation-delay: 0.5s;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- Team Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">👥 Meet Our Team Member</h2>
+        <div class="row">
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 border-0 shadow-sm text-center p-4">
+                    <h4>Sapna Rai</h4>
+                    <p class="text-muted">Backened Developer</p>
+                    <div class="social-links">
+                        <a href="#" class="text-primary me-2"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-primary"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 border-0 shadow-sm text-center p-4">
+                    <h4>Saloni Pegwal</h4>
+                    <p>Project manager</p>
+                    <div class="social-links">
+                        <a href="#" class="text-primary me-2"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-primary"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 border-0 shadow-sm text-center p-4">
+                    <h4>Sai Sri Laasya Ragipindi</h4>
+                    <p class="text-muted">UI/UX Genrator</p>
+                    <div class="social-links">
+                        <a href="#" class="text-primary me-2"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-primary"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 border-0 shadow-sm text-center p-4">
+                    <h4>Sai Jayanth Pothala</h4>
+                    <p class="text-muted">Frontened Developer</p>
+                    <div class="social-links">
+                        <a href="#" class="text-primary me-2"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-primary"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+        <section class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-5">🚀 Why Choose Us?</h2>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="fas fa-robot fa-3x text-primary mb-3"></i>
+                                <h4>Innovation-Driven</h4>
+                                <p>AI, blockchain, and immersive experiences for seamless travel</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="fas fa-leaf fa-3x text-success mb-3"></i>
+                                <h4>Sustainability-Focused</h4>
+                                <p>Committed to carbon neutrality and green tourism</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="fas fa-user-check fa-3x text-info mb-3"></i>
+                                <h4>Personalized</h4>
+                                <p>Customized stays and smart concierge services</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="fas fa-globe fa-3x text-warning mb-3"></i>
+                                <h4>Global Reach</h4>
+                                <p>Supporting local businesses and cultural tourism</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5>🏨 About Us</h5>
+                    <p>We are redefining the travel experience with smart, sustainable, and personalized solutions for modern travelers.</p>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>📍 Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light">Home</a></li>
+                        <li><a href="about.php" class="text-light">About Us</a></li>
+                        <li><a href="popular.php" class="text-light">Destinations</a></li>
+                        <li><a href="contact.php" class="text-light">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>📞 Get in Touch</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-map-marker-alt me-2"></i>123 Travel Street, City</li>
+                        <li><i class="fas fa-envelope me-2"></i>support@travelease.com</li>
+                        <li><i class="fas fa-phone me-2"></i>+1 234 567 8900</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <p class="mb-0"> 2025 TravelEase. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="social-links">
+                        <a href="#" class="text-light me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <h6> Secure Payments</h6>
+                    <div class="payment-methods">
+                        <i class="fab fa-cc-visa mx-2"></i>
+                        <i class="fab fa-cc-mastercard mx-2"></i>
+                        <i class="fab fa-cc-paypal mx-2"></i>
+                        <i class="fab fa-bitcoin mx-2"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

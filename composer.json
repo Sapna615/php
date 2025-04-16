@@ -1,0 +1,7 @@
+{
+    "name": "yourproject/int220",
+    "type": "project",
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    }
+}
